@@ -1,6 +1,6 @@
 # VGA BIOS finder
 
-Find VGA BIOS blobs from [UEFITool's UEFIExtract](https://github.com/LongSoft/UEFITool) dumps.  Adapted from [chrisf4lc0n's blog](https://coreboot.f4lc0n-industries.co.uk/w541.html#53-extract-the-nvidia-k1100m-vga-rom-and-intel-vbt-using-uefiextract
+Find VGA BIOS blobs from [UEFITool's UEFIExtract](https://github.com/LongSoft/UEFITool) dumps.  Adapted from [chrisf4lc0n's blog](https://coreboot.f4lc0n-industries.co.uk/w541.html#53-extract-the-nvidia-k1100m-vga-rom-and-intel-vbt-using-uefiextract)
 
 ## Requirements
 

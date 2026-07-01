@@ -8,6 +8,8 @@ Find VGA BIOS blobs from [UEFITool's UEFIExtract](https://github.com/LongSoft/UE
 
 ## Usage
 
+Extracted file names will be in the format of `vgabios_<VENDER NAME>_<VENDOR ID>_<DEVICE ID>.bin`.  Use a site like [PCI Lookup](https://pcilookup.com/) to reference the device's model name to find the VGA BIOS relevant to your system.
+
 ```sh
 usage: vgabios_finder.py [-h] [-d DESTINATION_PATH] [--intel-only] [--nvidia-only] [--via-only] [--amd-only] [--device-id DEVICE_ID] path
 

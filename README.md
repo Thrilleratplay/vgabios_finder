@@ -33,29 +33,24 @@ options:
 ## Examples
 
 ```sh
-$> python vgabios_finder.py -d ./dest x230_stock_full.rom.dump
-
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/345 0AFCDD7A-345E-415E-926D-C5971B580400/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x8086 device=0x0106 size=65536 bytes
+$> python vgabios_finder.py  -d ./dest/ w530_12m_full.bin.dump                                                                                       [15:34:16]
+w530_12m_full.bin.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/347 0AFCDD7A-345E-415E-926D-C5971B580400/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x8086 device=0x0106 size=65536 bytes
   >>> EXTRACTED to ./dest/vgabios_Intel_8086_0106.bin
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/346 9781FA9D-5A3B-431A-AD59-2748C9A170EC/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x1057 size=62976 bytes
-  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_1057.bin
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/347 33B889AF-6EF1-4D6E-B9BE-B28067E20AE8/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0dfe size=62976 bytes
-  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0dfe.bin
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/348 2C358886-47BE-4084-A677-55637F1AB4A5/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0def size=63488 bytes
-  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0def.bin
+w530_12m_full.bin.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/348 09D7A900-3333-421D-B217-71A7D87857BC/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0ffc size=90624 bytes
+  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0ffc.bin
+w530_12m_full.bin.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/349 9781FA9D-5A3B-431A-AD59-2748C9A170EC/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0ffb size=90624 bytes
+  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0ffb.bin
 ```
 
 
 ```sh
-$> python vgabios_finder.py -d ./dest --intel-only x230_stock_full.rom.dump
-
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/345 0AFCDD7A-345E-415E-926D-C5971B580400/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x8086 device=0x0106 size=65536 bytes
+$> python vgabios_finder.py  --intel-only -d ./dest/ w530_12m_full.bin.dump                                                                            [15:34:48]
+w530_12m_full.bin.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/347 0AFCDD7A-345E-415E-926D-C5971B580400/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x8086 device=0x0106 size=65536 bytes
   >>> EXTRACTED to ./dest/vgabios_Intel_8086_0106.bin
 ```
 
 ```sh
-$> python vgabios_finder.py -d ./dest --device-id 0x0def x230_stock_full.rom.dump
-
-x230_stock_full.rom.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/348 2C358886-47BE-4084-A677-55637F1AB4A5/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0def size=63488 bytes
-  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0def.bin
+$> python vgabios_finder.py  --device-id 0x0ffb  -d ./dest/ w530_12m_full.bin.dump                                                                     [15:35:40]
+w530_12m_full.bin.dump/3 BIOS region/1 7A9354D9-0468-444A-81CE-0BF617D890DF/0 4A538818-5AE0-4EB2-B2EB-488B23657022/0 Compressed section/1 Volume image section/0 7A9354D9-0468-444A-81CE-0BF617D890DF/349 9781FA9D-5A3B-431A-AD59-2748C9A170EC/0 FC1BCDB0-7D31-49AA-936A-A4600D9DD083/0 Raw section/body.bin  vendor=0x10de device=0x0ffb size=90624 bytes
+  >>> EXTRACTED to ./dest/vgabios_NVIDIA_10de_0ffb.bin
 ```

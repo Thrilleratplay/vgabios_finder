@@ -120,11 +120,10 @@ def vga_rom_find(
                                 dev_id = unpack_from('<H', data, offset+6)[0]
 
                                 if (device_id is None or device_id == dev_id):
-                                    size = len(data)
                                     print(
                                         f'{path}  vendor=0x{vendor_id:04x} '
                                         f'device=0x{dev_id:04x} '
-                                        f'size={size} bytes'
+                                        f'size={len(data)} bytes'
                                     )
                                     outname = os.path.join(
                                         dest_path,
@@ -136,9 +135,7 @@ def vga_rom_find(
                                             '.bin'
                                         )
                                     )
-                                    open(outname, 'wb').write(
-                                       data[:size] if size else data
-                                    )
+                                    open(outname, 'wb').write(data)
                                     print(f'  >>> EXTRACTED to {outname}')
                 # pylint: disable=W0718
                 except BaseException:

@@ -120,7 +120,7 @@ def vga_rom_find(
                                 dev_id = unpack_from('<H', data, offset+6)[0]
 
                                 if (device_id is None or device_id == dev_id):
-                                    size = data[2] * 512
+                                    size = len(data)
                                     print(
                                         f'{path}  vendor=0x{vendor_id:04x} '
                                         f'device=0x{dev_id:04x} '
